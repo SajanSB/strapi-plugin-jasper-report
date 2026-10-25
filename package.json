@@ -1,0 +1,91 @@
+{
+  "version": "0.1.0",
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "jasper",
+    "jasperreports",
+    "report",
+    "pdf",
+    "jrxml"
+  ],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "source": "./admin/src/index.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "server/java/v6/Runner.java",
+    "server/java/v6/lib",
+    "server/java/v7/Runner.java",
+    "server/java/v7/lib"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "test:ts:back": "tsc -p server/tsconfig.json",
+    "test:ts:front": "tsc -p admin/tsconfig.json"
+  },
+  "dependencies": {
+    "react-intl": "^6.6.2"
+  },
+  "devDependencies": {
+    "@strapi/sdk-plugin": "^5.3.0",
+    "@strapi/strapi": "^5.0.0",
+    "@strapi/typescript-utils": "^5.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "prettier": "^3.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
+    "styled-components": "^6.1.0",
+    "typescript": "^5.4.0",
+    "@strapi/design-system": "^2.0.0",
+    "@strapi/icons": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@strapi/sdk-plugin": "^5.3.0",
+    "@strapi/strapi": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0",
+    "@strapi/design-system": "^2.0.0",
+    "@strapi/icons": "^2.0.0"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "jasper-report",
+    "displayName": "Jasper Report",
+    "description": "Upload JasperReports .jrxml templates and generate PDF, XLSX, DOCX, HTML and CSV reports through a Strapi API."
+  },
+  "name": "strapi-plugin-jasper-report",
+  "description": "Upload JasperReports .jrxml templates and generate PDF, XLSX, DOCX, HTML and CSV reports through a Strapi API.",
+  "license": "MIT",
+  "author": "Sajan S B <sajan.sathikumar@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SajanSB/strapi-plugin-jasper-report.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SajanSB/strapi-plugin-jasper-report/issues"
+  },
+  "homepage": "https://github.com/SajanSB/strapi-plugin-jasper-report#readme"
+}

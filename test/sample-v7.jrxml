@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="sample" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3b1a8d0e-6f0a-4c52-9d0e-0a1b2c3d4e5f">
+	<parameter name="title" class="java.lang.String"/>
+	<query language="json"><![CDATA[]]></query>
+	<field name="name" class="java.lang.String"/>
+	<field name="qty" class="java.lang.Integer"/>
+	<title height="40">
+		<element kind="textField" x="0" y="0" width="555" height="30" fontSize="18.0" bold="true">
+			<expression><![CDATA[$P{title}]]></expression>
+		</element>
+	</title>
+	<detail>
+		<band height="20">
+			<element kind="textField" x="0" y="0" width="400" height="20">
+				<expression><![CDATA[$F{name}]]></expression>
+			</element>
+			<element kind="textField" x="400" y="0" width="155" height="20">
+				<expression><![CDATA[$F{qty}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
